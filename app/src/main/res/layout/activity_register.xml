@@ -1,32 +1,159 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".RegisterActivity">
+    android:background="#ffffff"
+    android:padding="16dp">
 
-    <TextView
-        android:id="@+id/registerHeaderText"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Register Page"
-        android:textSize="32sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.117" />
+        android:orientation="vertical">
 
-    <Button
-        android:id="@+id/registBackToMainBtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="120dp"
-        android:text="Back to Main"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        <!-- Back Button -->
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <ImageView
+            android:id="@+id/backButton"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:src="@drawable/ic_arrow_back"
+            android:contentDescription="Back"
+            android:layout_gravity="start"
+            android:padding="4dp" />
+
+        <!-- Title -->
+        <TextView
+            android:id="@+id/titleText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:gravity="center"
+            android:text="Create Account"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/fullNameInput"
+            android:layout_width="347dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:background="@color/gray"
+            android:backgroundTint="#f3f3f3"
+            android:hint="Full Name"
+            android:padding="12dp"
+            android:textColor="#5b5b5b"
+            android:elevation="5dp"/>
+
+        <EditText
+            android:id="@+id/emailInput"
+            android:layout_width="347dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:background="@color/gray"
+            android:backgroundTint="#f3f3f3"
+            android:hint="Email address"
+            android:inputType="textEmailAddress"
+            android:padding="12dp"
+            android:elevation="3dp"/>
+
+        <!-- Phone Number -->
+        <EditText
+            android:id="@+id/phoneInput"
+            android:layout_width="347dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:background="@color/gray"
+            android:backgroundTint="#f3f3f3"
+            android:hint="Phone Number"
+            android:inputType="phone"
+            android:padding="12dp"
+            android:elevation="3dp"/>
+
+        <!-- Password -->
+        <EditText
+            android:id="@+id/passwordInput"
+            android:layout_width="347dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:background="@color/gray"
+            android:backgroundTint="#f3f3f3"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:padding="12dp"
+            android:elevation="3dp"/>
+
+        <!-- Confirm Password -->
+        <EditText
+            android:id="@+id/confirmPasswordInput"
+            android:layout_width="347dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:background="@color/gray"
+            android:backgroundTint="#f3f3f3"
+            android:hint="Confirm Password"
+            android:inputType="textPassword"
+            android:padding="12dp"
+            android:elevation="3dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="8dp"
+            android:gravity="center_vertical">
+
+            <CheckBox
+                android:id="@+id/termsCheckbox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:buttonTint="#D3D3D3" />
+
+            <TextView
+                android:id="@+id/termsText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="I agree to the Terms &amp; Conditions"
+                android:textColor="#000000"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/signUpButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="SIGN UP"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="16dp"
+            android:backgroundTint="#D3D3D3"
+            android:textColor="#000000"
+            android:padding="12dp" />
+
+        <TextView
+            android:id="@+id/alreadyAccountText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="16dp"
+            android:textSize="14sp"
+            android:textAlignment="center"
+            android:textColor="#5b5b5b"
+            android:text="@string/already_account_text" />
+
+
+
+
+    </LinearLayout>
+</ScrollView>

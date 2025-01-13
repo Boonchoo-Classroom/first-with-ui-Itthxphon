@@ -6,4 +6,12 @@
     </style>
 
     <style name="Theme.FirstUIAssignment" parent="Base.Theme.FirstUIAssignment" />
+
+    <!-- สไตล์สำหรับปุ่ม -->
+    <style name="CustomButton" parent="Widget.Material3.Button">
+
+        <item name="android:textColor">#5b5b5b"</item>
+        <item name="android:backgroundTint">#dbdbdc</item>
+
+    </style>
 </resources>
